@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+  <button onclick="myFunction()">Try it</button>
+
+  <script>
+    const socket = new WebSocket("ws://localhost:5857");
+    socket.onmessage = function (event) {
+      var data = event.data
+      // alert(data)
+      //document.getElementById("storage").innerHTML = data
+    }
+    socket.onopen = function () {
+      //socket.send('Hello server!')
+    }
+  </script>
+  <h1>Hello World!</h1>
+  <img src="../../assets/mic/mic.gif" width="100" height="100"/>
+
+  <p>
+    We are using node
+    <script>document.write(process.versions.node)</script>,
+    Chrome
+    <script>document.write(process.versions.chrome)</script>,
+    and Electron
+    <script>document.write(process.versions.electron)</script>.
+  </p>
+  <input></input>
+  <button class="w3-button" id="openButton" onclick="this.open()">Open</button>
+</body>
+
+</html>

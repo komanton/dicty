@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Toolbar</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="toolbar.css">
+  <!-- <script defer src="transparency-pointer.js"></script> -->
+  <!-- <script defer src="renderer.js"></script> -->
+</head>
+
+<body>
+  <!-- <button onclick="myFunction()">Try it</button> -->
+
+  <!-- <script>
+    const socket = new WebSocket("ws://localhost:5857");
+    socket.onmessage = function (event) {
+      var data = event.data
+      alert(data)
+      //document.getElementById("storage").innerHTML = data
+    }
+    socket.onopen = function () {
+      //socket.send('Hello server!')
+    }
+  </script> -->
+  <div>
+    <button id="start_button" onclick="toolbarMenu.startButton(event)">
+      <img id="start_img" src="../../assets/mic/mic.gif" alt="Record">
+    </button>
+  </div>
+  <!-- helps to drag. TODO https://github.com/electron/electron/issues/1354 -->
+  <span><img id="start_img" src="../../assets/drag-move-2-line.svg" alt="Record"></span> 
+
+  <script src="toolbar.js"></script>
+</body>
+
+</html>
