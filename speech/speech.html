@@ -153,8 +153,18 @@
 <script>
   const socket = new WebSocket("ws://localhost:5857");
   socket.onmessage = function (event) {
-    var data = JSON.parse(event.data).body
-    alert(data)
+    var message = JSON.parse(event.data)
+    console.log(message)
+    if (message.headers?.type === 'init') {
+      alert(message.body)
+      return
+    } else if (message.headers?.type === 'start-stop') {
+      var startStop = message.body
+      startButton({ timeStamp: new Date().getTime() })
+      return
+    }
+
+    
     //document.getElementById("storage").innerHTML = data
   }
   socket.onopen = function () {

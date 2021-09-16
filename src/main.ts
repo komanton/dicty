@@ -24,11 +24,20 @@ function createWindow() {
   // }, 3000);
 
   wss.on('connection', function (w: any) {
-    w.on('message', function (event: CommunicationEvent<string>) {
+    w.on('message', function (message: string) {
+      const event = JSON.parse(message)
+      console.log(event.headers?.type)
+      // console.log(wss.clients)
+      if (event.headers?.type === 'start-stop') {
+        console.log('start-stop')
+        wss.clients.forEach(client => client.send(JSON.stringify(event)));
+        return
+      }
+
       if (event.headers?.type !== 'transcription') {
         return
       }
-      console.log(event)
+      
       // robot.typeStringDelayed(data,0);
       for (const s of event.body) {
         robot.unicodeTap(s.charCodeAt(0))
