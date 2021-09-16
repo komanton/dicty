@@ -24,10 +24,13 @@ function createWindow() {
   // }, 3000);
 
   wss.on('connection', function (w: any) {
-    w.on('message', function (data: any) {
-      console.log(data)
+    w.on('message', function (event: CommunicationEvent<string>) {
+      if (event.headers?.type !== 'transcription') {
+        return
+      }
+      console.log(event)
       // robot.typeStringDelayed(data,0);
-      for (const s of data) {
+      for (const s of event.body) {
         robot.unicodeTap(s.charCodeAt(0))
       }
     })
