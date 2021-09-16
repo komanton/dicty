@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import { CommunicationEvent } from './models/events';
-const WebSocket = require("ws")
+import WebSocket from 'ws';
+
 const wss = new WebSocket.Server({ port: 5857 })
 // Type "Hello World" then press enter.
 var robot = require("robotjs");

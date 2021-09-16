@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "electron": "^11.3.0",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.2",
+    "@types/ws": "^7.4.7"
   },
   "dependencies": {
     "robotjs": "https://github.com/octalmage/robotjs.git",

@@ -1,8 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const electron_1 = require("electron");
-const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 5857 });
+const ws_1 = __importDefault(require("ws"));
+const wss = new ws_1.default.Server({ port: 5857 });
 // Type "Hello World" then press enter.
 var robot = require("robotjs");
 robot.setKeyboardDelay(1);
