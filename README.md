@@ -5,7 +5,7 @@
 
 Translates your voice into native keyboard symbols in any typing context.
 
-Extremely useful for tablets without keyboard.
+Extremely useful for laptops with detachable keyboard in tablet mode.
 
 Supports dictation with punctuation.
 
