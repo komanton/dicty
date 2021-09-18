@@ -1,5 +1,13 @@
 # Dicty
-Cross-Platform Transcription tool
+## Cross-Platform Multi-Language Dictation Tool
+
+### Supports: Skype, Slack, Outlook, Word, Webpages, Console, Shell and other ...
+
+Translates your voice into native keyboard symbols in any typing context.
+
+Extremely useful for tablets without keyboard.
+
+Supports dictation with punctuation.
 
 # Build Dependencies
 
