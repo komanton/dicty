@@ -1,5 +1,5 @@
 # Dicty
-## Cross-Platform Multi-Language Dictation Tool
+## Cross-Platform Multi-Language Dictation Tool (speech-to-text)
 
 ### Supports: Skype, Slack, Outlook, Word, Webpages, Console, Shell and other ...
 
