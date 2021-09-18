@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const electron_1 = require("electron");
 const ws_1 = __importDefault(require("ws"));
+const child_process_1 = require("child_process");
+const ps = (0, child_process_1.fork)(`${__dirname}/server.js`);
 const wss = new ws_1.default.Server({ port: 5857 });
 // Type "Hello World" then press enter.
 var robot = require("robotjs");

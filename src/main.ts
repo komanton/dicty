@@ -1,6 +1,9 @@
 import { app, BrowserWindow } from 'electron';
 import { CommunicationEvent } from './models/events';
 import WebSocket from 'ws';
+import { fork } from 'child_process'
+
+const ps = fork(`${__dirname}/server.js`)
 
 const wss = new WebSocket.Server({ port: 5857 })
 // Type "Hello World" then press enter.
