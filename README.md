@@ -54,7 +54,8 @@ Solution:
 4. Press Ok
 
 # Distribution
-1. Download Electron binaries (see exact version in package.jsnon
+1. Download Electron binaries (see exact version in package.jsnon)
 2. Place the content of the current repository to the app folder. Follow the instruction for Windows https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
 4. Navigate to app folder and run yarn --prod
 5. Rebuild robotjs with command `npm rebuild --runtime=electron --target=11.3.0 --disturl=https://atom.io/download/atom-shell --abi=85` (see https://github.com/octalmage/robotjs/wiki/Electron)
+6. Zip all folder with electron.exe and new app folder in a single achive.
