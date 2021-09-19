@@ -30,7 +30,7 @@ You can use these phrases to add punctuation to your text by saying the name of 
 * Question mark
 * New line
 * New paragraph
-* 
+
 Notes:
 - Punctuation works in German, English, Spanish, French, Italian, and Russian.
 - In Spanish, punctuation at the beginning of the sentence, like ¡ or ¿, must be typed. 
