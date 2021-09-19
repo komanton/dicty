@@ -14,7 +14,8 @@ Supports dictation with punctuation.
 2. Press 'Allow Access' when Windows Secutity Alert apears. (To allow connection to local host only)
 3. todo 
 
-# Build Dependencies
+# Linux
+## Build Dependencies
 
 `apt-get install libx11-dev libxtst-dev libpng++-dev`
 
