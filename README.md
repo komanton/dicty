@@ -9,6 +9,11 @@ Extremely useful for laptops with detachable keyboard in tablet mode.
 
 Supports dictation with punctuation.
 
+# Installation
+1. todo
+2. Press 'Allow Access' when Windows Secutity Alert apears. (To allow connection to local host only)
+3. todo 
+
 # Build Dependencies
 
 `apt-get install libx11-dev libxtst-dev libpng++-dev`
@@ -49,5 +54,7 @@ Solution:
 4. Press Ok
 
 # Distribution
-* https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
-* https://github.com/octalmage/robotjs/wiki/Electron
+1. Download Electron binaries (see exact version in package.jsnon
+2. Place the content of the current repository to the app folder. Follow the instruction for Windows https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
+4. Navigate to app folder and run yarn --prod
+5. Rebuild robotjs with command `npm rebuild --runtime=electron --target=11.3.0 --disturl=https://atom.io/download/atom-shell --abi=85` (see https://github.com/octalmage/robotjs/wiki/Electron)
