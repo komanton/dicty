@@ -22,6 +22,19 @@ Supports dictation with punctuation.
 10. After that, place cursor in any place you want to type something and say some phrase.
 11. Wait a second and magic will happen!
 
+# Punctuation
+You can use these phrases to add punctuation to your text by saying the name of the punctuation:
+* Period
+* Comma
+* Exclamation point
+* Question mark
+* New line
+* New paragraph
+* 
+Notes:
+- Punctuation works in German, English, Spanish, French, Italian, and Russian.
+- In Spanish, punctuation at the beginning of the sentence, like ¡ or ¿, must be typed. 
+
 # Linux
 ## Build Dependencies
 
@@ -68,3 +81,37 @@ Solution:
 4. Navigate to app folder and run yarn --prod
 5. Rebuild robotjs with command `npm rebuild --runtime=electron --target=11.3.0 --disturl=https://atom.io/download/atom-shell --abi=85` (see https://github.com/octalmage/robotjs/wiki/Electron)
 6. Zip all folder with electron.exe and new app folder in a single achive.
+
+# Languages
+ Afrikaans
+ Bahasa Indonesia
+ Bahasa Melayu
+ Català
+ Čeština
+ Deutsch
+ English
+ Español
+ Euskara
+ Français
+ Galego
+ Hrvatski
+ IsiZulu
+ Íslenska
+ Italiano
+ Magyar
+ Nederlands
+ Norsk bokmål
+ Polski
+ Português
+ Română
+ Slovenčina
+ Suomi
+ Svenska
+ Türkçe
+ български
+ Pусский
+ Српски
+ 한국어
+ 中文
+ 日本語
+ Lingua latīna
