@@ -49,5 +49,5 @@ Solution:
 4. Press Ok
 
 # Distribution
-https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
-https://github.com/octalmage/robotjs/wiki/Electron
+* https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
+* https://github.com/octalmage/robotjs/wiki/Electron
