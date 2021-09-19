@@ -50,3 +50,4 @@ Solution:
 
 # Distribution
 https://www.electronjs.org/docs/tutorial/application-distribution#manual-distribution
+https://github.com/octalmage/robotjs/wiki/Electron
