@@ -10,7 +10,7 @@ Extremely useful for laptops with detachable keyboard in tablet mode.
 Supports dictation with punctuation.
 
 # Installation
-1. Download a zip achive with latest release from.
+1. Download a zip achive with latest release from https://github.com/komanton/dicty/releases.
 2. Extract the zip into a folder on your desktop.
 3. Execute electron.exe from folder (you can create a shortcut)
 4. When 'Windows protected your PC' alert apears, press 'More Info' and then press 'Run anyway' button.
