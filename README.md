@@ -1,6 +1,6 @@
 # Dicty
 ## Cross-Platform Multi-Language Dictation Tool (speech-to-text)
-
+Official site: <a href="https://dicty.me">Dicty.me</a>
 ### Supports: Skype, Slack, Meeting notes, Outlook, Word, Console, Shell and other ...
 
 Translates your voice into native keyboard symbols in any typing context.
