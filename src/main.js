@@ -11,6 +11,7 @@ const wss = new ws_1.default.Server({ port: 5857 });
 // Type "Hello World" then press enter.
 var robot = require("robotjs");
 robot.setKeyboardDelay(1);
+const state = { isStarted: false };
 function createWindow() {
     const win = new electron_1.BrowserWindow({
         width: 800,
@@ -32,6 +33,7 @@ function createWindow() {
             // console.log(wss.clients)
             if (event.headers?.type === 'start-stop') {
                 console.log('start-stop');
+                state.isStarted = event.body.isStarted;
                 wss.clients.forEach(client => client.send(JSON.stringify(event)));
                 return;
             }
@@ -92,6 +94,13 @@ electron_1.app.on('ready', () => {
     setTimeout(() => {
         createToolbar();
     }, 200);
+    electron_1.globalShortcut.register('CommandOrControl+Space', () => {
+        console.log('CommandOrControl+Space is pressed');
+        wss.clients.forEach(client => client.send(JSON.stringify({
+            headers: { type: 'start-stop' },
+            body: { isStarted: !state.isStarted }
+        })));
+    });
 });
 // app.whenReady().then(createWindow).then(createToolbar);
 electron_1.app.on('window-all-closed', () => {

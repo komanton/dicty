@@ -11,7 +11,10 @@ class Toolbar {
 
   }
 
-  startButton(event: any) {
+  startButton(event: any, isStarted: boolean) {
+    if (this.recognizing === isStarted) {
+      return
+    }
     console.log(event)
     if (!this.recognizing) {
       console.log('start', this.recognizing);
@@ -41,6 +44,22 @@ const getSocket = () => {
   return socket
 }
 
+
+
 const startImage = document.getElementById('start_img') as HTMLImageElement;
 
 const toolbarMenu = new Toolbar(startImage, getSocket);
+
+socket.onmessage = function (event) {
+  var message = JSON.parse(event.data)
+  console.log(message)
+  if (message.headers?.type === 'start-stop') {
+    toolbarMenu.startButton(null, message.body.isStarted)
+  }
+
+
+  //document.getElementById("storage").innerHTML = data
+}
+socket.onopen = function () {
+  // socket.send('Hello server!')
+}

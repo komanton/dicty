@@ -1,5 +1,5 @@
-import { app, BrowserWindow } from 'electron';
-import { CommunicationEvent } from './models/events';
+import { app, BrowserWindow, globalShortcut } from 'electron';
+import { CommunicationEvent, StartStopEvent } from "./models/events";
 import WebSocket from 'ws';
 import { fork } from 'child_process'
 
@@ -9,6 +9,8 @@ const wss = new WebSocket.Server({ port: 5857 })
 // Type "Hello World" then press enter.
 var robot = require("robotjs");
 robot.setKeyboardDelay(1);
+
+const state = { isStarted: false }
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -33,6 +35,7 @@ function createWindow() {
       // console.log(wss.clients)
       if (event.headers?.type === 'start-stop') {
         console.log('start-stop')
+        state.isStarted = event.body.isStarted
         wss.clients.forEach(client => client.send(JSON.stringify(event)));
         return
       }
@@ -101,6 +104,15 @@ app.on('ready', () => {
   setTimeout(() => {
     createToolbar();
   }, 200);
+
+  globalShortcut.register('CommandOrControl+Space', () => {
+    console.log('CommandOrControl+Space is pressed')
+    wss.clients.forEach(client => client.send(JSON.stringify({ 
+      headers: { type: 'start-stop' },
+      body: { isStarted: !state.isStarted }
+    } as StartStopEvent)));
+  })
+
 });
 
 // app.whenReady().then(createWindow).then(createToolbar);

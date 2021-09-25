@@ -22,6 +22,9 @@ Supports dictation with punctuation.
 10. After that, place cursor in any place you want to type something and say some phrase.
 11. Wait a second and magic will happen!
 
+# Keyboard Shortcuts
+1. Ctrl+Space - star/stop dictation
+
 # Punctuation
 You can use these phrases to add punctuation to your text by saying the name of the punctuation:
 * Period
