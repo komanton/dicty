@@ -118,3 +118,15 @@ Solution:
  中文
  日本語
  Lingua latīna
+
+
+# Backers and Sponsors
+
+Thank you to all our backers and sponsors! 🙏 
+[[Become a backer](https://opencollective.com/dicty-me#backer)]
+[[Become a sponsor](https://opencollective.com/dicty-me#sponsor)]
+
+<a href="https://opencollective.com/dicty-me#backers" target="_blank"><img src="https://opencollective.com/dicty-me/backers.svg?width=890"></a>
+
+
+<a href="https://opencollective.com/dicty-me#sponsors" target="_blank"><img src="https://opencollective.com/dicty-me/sponsors.svg?width=890"></a>
