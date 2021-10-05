@@ -101,6 +101,13 @@ electron_1.app.on('ready', () => {
             body: { isStarted: !state.isStarted }
         })));
     });
+    electron_1.globalShortcut.register('CommandOrControl+L', () => {
+        console.log('CommandOrControl+L is pressed');
+        wss.clients.forEach(client => client.send(JSON.stringify({
+            headers: { type: 'language' },
+            body: {}
+        })));
+    });
 });
 // app.whenReady().then(createWindow).then(createToolbar);
 electron_1.app.on('window-all-closed', () => {

@@ -1,5 +1,5 @@
 import { app, BrowserWindow, globalShortcut } from 'electron';
-import { CommunicationEvent, StartStopEvent } from "./models/events";
+import { CommunicationEvent, LanguageEvent, StartStopEvent } from "./models/events";
 import WebSocket from 'ws';
 import { fork } from 'child_process'
 
@@ -111,6 +111,14 @@ app.on('ready', () => {
       headers: { type: 'start-stop' },
       body: { isStarted: !state.isStarted }
     } as StartStopEvent)));
+  })
+
+  globalShortcut.register('CommandOrControl+L', () => {
+    console.log('CommandOrControl+L is pressed')
+    wss.clients.forEach(client => client.send(JSON.stringify({ 
+      headers: { type: 'language' },
+      body: {}
+    } as LanguageEvent)));
   })
 
 });
