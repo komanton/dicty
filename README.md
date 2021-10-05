@@ -119,7 +119,7 @@ Solution:
  日本語
  Lingua latīna
 
-
+<!--
 # Backers and Sponsors
 
 Thank you to all our backers and sponsors! 🙏 
@@ -130,3 +130,4 @@ Thank you to all our backers and sponsors! 🙏
 
 
 <a href="https://opencollective.com/dicty-me#sponsors" target="_blank"><img src="https://opencollective.com/dicty-me/sponsors.svg?width=890"></a>
+-->
