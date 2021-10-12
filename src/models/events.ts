@@ -9,4 +9,4 @@ export type EventBody<TPayload> = { body: TPayload }
 export type CommunicationEvent<TPayload> = EventHeaders & EventBody<TPayload>
 
 export type StartStopEvent = CommunicationEvent<{isStarted: boolean}>
-export type LanguageEvent = CommunicationEvent<unknown>
+export type LanguageEvent = CommunicationEvent<{ language?: string } | unknown>

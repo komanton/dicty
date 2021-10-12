@@ -10,7 +10,10 @@ const wss = new WebSocket.Server({ port: 5857 })
 var robot = require("robotjs");
 robot.setKeyboardDelay(1);
 
-const state = { isStarted: false }
+const state = {
+  isStarted: false,
+  language: undefined
+} as { isStarted: boolean, language?: string }
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -40,10 +43,19 @@ function createWindow() {
         return
       }
 
+      if (event.headers?.type === 'language') {
+        console.log('language')
+        if (event.body?.language) {
+          state.language = event.body.language
+          wss.clients.forEach(client => client.send(JSON.stringify(event)));
+        }
+        return
+      }
+
       if (event.headers?.type !== 'transcription') {
         return
       }
-      
+
       // robot.typeStringDelayed(data,0);
       for (const s of event.body) {
         robot.unicodeTap(s.charCodeAt(0))
@@ -52,7 +64,7 @@ function createWindow() {
     w.on('close', function () {
       console.log("Speech.html is closed. Please, open it to continue dictation!")
     })
-    w.send(JSON.stringify({ 
+    w.send(JSON.stringify({
       headers: { type: 'init' },
       body: "Dictation is initialized!"
     } as CommunicationEvent<string>))
@@ -107,7 +119,7 @@ app.on('ready', () => {
 
   globalShortcut.register('CommandOrControl+Space', () => {
     console.log('CommandOrControl+Space is pressed')
-    wss.clients.forEach(client => client.send(JSON.stringify({ 
+    wss.clients.forEach(client => client.send(JSON.stringify({
       headers: { type: 'start-stop' },
       body: { isStarted: !state.isStarted }
     } as StartStopEvent)));
@@ -115,7 +127,7 @@ app.on('ready', () => {
 
   globalShortcut.register('CommandOrControl+L', () => {
     console.log('CommandOrControl+L is pressed')
-    wss.clients.forEach(client => client.send(JSON.stringify({ 
+    wss.clients.forEach(client => client.send(JSON.stringify({
       headers: { type: 'language' },
       body: {}
     } as LanguageEvent)));
