@@ -12,7 +12,7 @@ Supports dictation with punctuation.
 # Installation
 1. Download a zip achive with latest release from https://github.com/komanton/dicty/releases.
 2. Extract the zip into a folder on your desktop.
-3. Execute electron.exe from folder (you can create a shortcut)
+3. Execute dicty.exe from folder (you can create a shortcut)
 4. When 'Windows protected your PC' alert apears, press 'More Info' and then press 'Run anyway' button.
 6. Press 'Allow Access' when Windows Secutity Alert apears. (To allow connection to local host only).
 7. When dicty is oppened press the link under the label "Open URL in Chrome:"
