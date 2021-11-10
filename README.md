@@ -23,7 +23,8 @@ Supports dictation with punctuation.
 11. Wait a second and magic will happen!
 
 # Keyboard Shortcuts
-1. Ctrl+Space - star/stop dictation
+1. Ctrl+Space - Star/Stop dictation
+2. Ctrl+L - Switch languages(during dictation). Firstly, need to add other languages to Chrome->Settings->Languages->Add Languages. 
 
 # Punctuation
 You can use these phrases to add punctuation to your text by saying the name of the punctuation:
