@@ -34,7 +34,8 @@ class Toolbar {
     }
     setLanguage(language) {
         console.log('set language', language);
-        this.languageButton.innerHTML = language ? language : '';
+        this.languageButton.innerHTML = language
+            ? language.substring(0, 2).toUpperCase() : '';
     }
 }
 let socket = new WebSocket("ws://localhost:5857");
