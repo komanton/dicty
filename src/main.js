@@ -11,7 +11,10 @@ const wss = new ws_1.default.Server({ port: 5857 });
 // Type "Hello World" then press enter.
 var robot = require("robotjs");
 robot.setKeyboardDelay(1);
-const state = { isStarted: false };
+const state = {
+    isStarted: false,
+    language: undefined
+};
 function createWindow() {
     const win = new electron_1.BrowserWindow({
         width: 800,
@@ -35,6 +38,14 @@ function createWindow() {
                 console.log('start-stop');
                 state.isStarted = event.body.isStarted;
                 wss.clients.forEach(client => client.send(JSON.stringify(event)));
+                return;
+            }
+            if (event.headers?.type === 'language') {
+                if (event.body?.language) {
+                    console.log('language', event.body?.language);
+                    state.language = event.body.language;
+                    wss.clients.forEach(client => client.send(JSON.stringify(event)));
+                }
                 return;
             }
             if (event.headers?.type !== 'transcription') {

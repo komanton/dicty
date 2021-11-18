@@ -44,8 +44,8 @@ function createWindow() {
       }
 
       if (event.headers?.type === 'language') {
-        console.log('language')
         if (event.body?.language) {
+          console.log('language', event.body?.language)
           state.language = event.body.language
           wss.clients.forEach(client => client.send(JSON.stringify(event)));
         }
@@ -129,7 +129,7 @@ app.on('ready', () => {
     console.log('CommandOrControl+L is pressed')
     wss.clients.forEach(client => client.send(JSON.stringify({
       headers: { type: 'language' },
-      body: {}
+      body: { }
     } as LanguageEvent)));
   })
 
