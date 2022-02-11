@@ -10,16 +10,16 @@ Extremely useful for laptops with detachable keyboard in tablet mode.
 Supports dictation with punctuation.
 
 # History
-1. Autumn 2019: My faiforite and very expensive laptop was brocken. As a temporarly solution, I choosed a cheep TABLET on Windows with a detachable keybord (like an experiment). Worked like a thin client via RDP.
-2. Spring 2019: Experiment with the tablet was succesfull! :partying_face: My previous laptop was not repaired and I bought a Microsoft Surface Pro 7 - the same form-factor: a tablet + a Detachable keyboard
-3. Autumn 2019: I had a strong filling that I want to drop away a detachable key board from a laptop in some cases. Don't warry, there ware no problem with a keybord - it perfet and implemented with high quality. The only reason here is I decided that typing with voice is much comfortable. I did a voice typing before in my Android smarphone but Windows had absolutely poor dictation tool in Windows 10 (only with one languate and built in virtual keyboard).
-4. The Game was started! :soccer: (Microsft 0 - 0 Dicty). There was three chalanges:
+1. Autumn 2019: My favorite and the very expensive laptop was broken. As a temporary solution, I chose a cheap TABLET on Windows with a detachable keyboard (like an experiment). Worked like a thin client via RDP.
+2. Spring 2019: Experiment with the tablet was successful! :partying_face: My previous laptop was not repaired and I bought a Microsoft Surface Pro 7 - the same form-factor: a tablet + a Detachable keyboard
+3. Autumn 2019: I had a strong feeling that I want to drop away a detachable keyboard from a laptop in some cases. Don't worry, there ware no problem with a keyboard - it perfect and implemented with high quality. The only reason here is I decided that typing with voice is much more comfortable. I did a voice typing before in my Android smartphone but Windows had an absolutely poor dictation tool in Windows 10 (only with one language and built-in virtual keyboard).
+4. The Game was started! :soccer: (Microsft 0 - 0 Dicty). There were several challenges:
    - Where to find Voice-to-Text transcription API ([Solution. Thanks Glen Shires](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API))
    - How to type inside popular messengers and editors, like Word (Thanks [robotjs](https://github.com/octalmage/robotjs) and WebSocket
-5. Spring 2020: It was not easy but after several month of research, the first MVP was released. :rocket: :partying_face: :soccer: (Microsft 0 - 1 Dicty)
+5. Spring 2020: It was not easy but after several months of research, the first MVP was released. :rocket: :partying_face: :soccer: (Microsft 0 - 1 Dicty)
 6. Autumn 2020: Dicty become OpenSourced! :medal_sports:
 7. Autumn 2021: Press release Windows 11 - A lot of improvments in Dictation Tool!!! (Try it: Windows + H) :astonished: :soccer: (Microsft 1 - 1 Dicty)
-8. ... to be continue ...
+8. ... to be continued ...
 
 # Installation
 1. Download a zip achive with latest release from https://github.com/komanton/dicty/releases.
