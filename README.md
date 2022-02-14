@@ -97,6 +97,7 @@ Solution:
 4. Navigate to app folder and run yarn --prod
 5. Rebuild robotjs with command `npm rebuild --runtime=electron --target=11.3.0 --disturl=https://atom.io/download/atom-shell --abi=85` (see https://github.com/octalmage/robotjs/wiki/Electron)
 6. Zip all folder with electron.exe and new app folder in a single achive.
+7. Fix link to download
 
 # Languages
  Afrikaans
